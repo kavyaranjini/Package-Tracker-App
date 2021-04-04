@@ -1,0 +1,25 @@
+.header {
+  background: green;
+}
+
+.footer {
+  background: red;
+}
+
+.home {
+  background: blue;
+}
+
+.packageTrack {
+  background: purple;
+}
+
+.link {
+  display: block;
+  color: white;
+  padding: 10px;
+  background: purple;
+  border-radius: 4px;
+  margin: 10px;
+  width: 100px;
+}
