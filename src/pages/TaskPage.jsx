@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import MyTable from "../components/MyTable";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Search from "../components/Search";
 
 export default function TaskPage({ tasks }) {
   const [data, setData] = useState([]);
+  const [searchData, setSearchData] = useState([]);
+  const [isSearched, setIsSearched] = useState(true);
 
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
 
@@ -12,18 +14,41 @@ export default function TaskPage({ tasks }) {
     fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setData(data);
-      });
-  }, [setData]);
+        const searchResult = data.filter(
+          (value) => value.user_name === searchData
+        );
+        console.log(searchResult);
+        if (searchResult.length === 0) {
+          setIsSearched(false);
+        }
+        if (searchResult.length > 0) {
+          setIsSearched(true);
+        }
 
-  console.log(data);
+        setData(searchResult);
+      });
+  }, [searchData, setData]);
+
+  const getSearchResult = (value) => {
+    setSearchData(value);
+  };
 
   return (
     <>
       <Header />
-      <MyTable data={data} />
-      <Footer />
+      <Search
+        getSearch={getSearchResult}
+        setSearchData={setSearchData}
+        setIsSearched={setIsSearched}
+      />
+
+      {data.length ? (
+        <MyTable data={data} />
+      ) : isSearched ? (
+        <h1>...loading</h1>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

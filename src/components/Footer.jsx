@@ -1,30 +1,24 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-}));
 
 export default function Footer() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <AppBar position="bottom">
-        <Toolbar variant="dense">
-          <Typography variant="h6" color="inherit">
-            SDA09 - Novare Potential
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <footer className="footer-distributed">
+      <div className="footer-left">
+        <h3>Contact us</h3>
+        <dev>Phone: +46783456789</dev>
+        <dev>
+          <p>Openning Hours: Monday to Friday (8:00 AM to 5:00 PM)</p>
+        </dev>
+        <dev>
+          <p>
+            Write us :
+            <a href="mailto:parcelquery@yellow.co.se">
+              {" "}
+              yellowcorporation@gmail.com{" "}
+            </a>
+          </p>
+        </dev>
+      </div>
+    </footer>
   );
 }

@@ -1,0 +1,28 @@
+/* Iphone */
+@media (min-width: 400px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body {
+    background-color: rgb(217, 238, 62);
+  }
+}
+/* Ipad */
+@media (min-width: 500px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+/* computer */
+@media (min-width: 650px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body {
+    background-color: rgb(232, 235, 76);
+  }
+}

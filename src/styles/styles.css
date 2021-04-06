@@ -1,0 +1,59 @@
+.header {
+  background: green;
+}
+
+.footer {
+  background: red;
+}
+
+.home {
+  background: blue;
+}
+
+.packageTrack {
+  background: purple;
+}
+
+@import url("./mytable.css");
+
+.link {
+  display: block;
+  color: white;
+  padding: 10px;
+  background: purple;
+  border-radius: 4px;
+  margin: 10px;
+  width: 100px;
+}
+.button {
+  padding: var(--space-small);
+  background-color: var(--color-red);
+  color: white;
+  font-weight: bold;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.App {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+footer {
+  /* background-color: rgb(240, 187, 13); */
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-size: small;
+  margin-top: 10px;
+  background-color: rgba(234, 235, 206, 0.938);
+}
+.footer-left {
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 750px) {
+  footer {
+    font-size: medium;
+  }
+}

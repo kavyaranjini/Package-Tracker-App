@@ -42,7 +42,6 @@ const tableIcons = {
 };
 
 export default function MyTable(props) {
-  console.log(props.data);
   return (
     <MaterialTable
       icons={tableIcons}
@@ -50,11 +49,12 @@ export default function MyTable(props) {
       columns={[
         { title: "Id", field: "id" },
         { title: "Parcel Id", field: "parcel_id" },
-        { title: "Sender", field: "sender" },
+        { title: "Location", field: "location_name" },
         { title: "ETA", field: "eta" },
         {
           title: "Status",
           field: "status",
+
           cellStyle: (rowData) => {
             if (rowData === "delivered") {
               return { color: "green" };

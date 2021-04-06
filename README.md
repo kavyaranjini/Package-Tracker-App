@@ -1,3 +1,15 @@
+# Package Tracking App
+
+Personnal project part of the Frontend Module in SDA, Novare Potential.
+
+## Task
+
+Create a simple web app for our customers that displays a list of orders (or parcels) with some details they need to know like order status, ETAs, pickup locations, etc.
+
+API Endpoint: https://my.api.mockaroo.com/orders.json?key=e49e6840
+
+The app MUST be done using ReactJS and support major mobile & desktop browsers/layouts.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
