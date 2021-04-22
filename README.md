@@ -10,6 +10,12 @@ API Endpoint: https://my.api.mockaroo.com/orders.json?key=e49e6840
 
 The app MUST be done using ReactJS and support major mobile & desktop browsers/layouts.
 
+# Installation
+
+git clone https://github.com/kavyaranjini/Package-Tracker-App
+npm install
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
